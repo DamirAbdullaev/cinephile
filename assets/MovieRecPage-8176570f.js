@@ -1,0 +1,1 @@
+import{_ as e}from"./Rec-dd773c6d.js";import{o,m as a,x as t}from"./index-c3b40a7a.js";const s={class:"main"},i={__name:"MovieRecPage",setup(c){return(_,r)=>(o(),a("div",s,[t(e,{type:"movie"})]))}};export{i as default};
