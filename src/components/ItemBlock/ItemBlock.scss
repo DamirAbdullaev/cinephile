@@ -1,0 +1,97 @@
+.main__info{
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    margin-top: 30px;
+    transition: 0.5s;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        
+        background: linear-gradient(90deg, #000 40%, rgba(0, 0, 0, 0.20) 70%, rgba(0, 0, 0, 0.00) 90%);
+    }
+    
+    &.active{
+        height: 700px;
+    }
+    
+    &-close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        border-radius: 33px;
+        background: rgba(20, 20, 20, 0.70);
+        padding: 20px;
+        z-index: 1;
+        cursor: pointer;
+    }
+    
+    &_block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        padding: 50px;
+        width: 50%;
+        height: 100%;
+        
+        &-bg{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+        
+        & h2{
+            color: #FFF;
+            font-family: Raleway;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        
+        & p{
+            color: #FFF;
+            font-family: Raleway;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px;
+            
+            text-align: justify;
+            -webkit-line-clamp: 4;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        
+
+    }
+    
+    &_desc{
+        display: flex;
+        gap: 30px;
+        
+        & span{
+            color: rgba(255, 255, 255, 0.60);
+            font-family: 'Montserrat';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+        }
+    }
+    
+
+}
