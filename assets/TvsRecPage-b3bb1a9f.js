@@ -1,0 +1,1 @@
+import{_ as e}from"./Rec-1e4c0fc9.js";import{o as t,m as a,x as s}from"./index-e58a277f.js";const o={class:"main"},p={__name:"TvsRecPage",setup(c){return(_,r)=>(t(),a("div",o,[s(e,{type:"tv"})]))}};export{p as default};
