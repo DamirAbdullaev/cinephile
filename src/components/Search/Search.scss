@@ -1,0 +1,15 @@
+.main__search{        
+    margin-top: 120px;
+    
+    & input{
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        color: #141414;
+        font-size: 18px;
+        font-weight: 700;
+        border: none;
+        outline: none;
+    }
+}
+

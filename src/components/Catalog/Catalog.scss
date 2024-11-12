@@ -1,0 +1,93 @@
+.main__catalog,
+.main__search{
+    margin-top: 140px;
+    
+    &_title{
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    &_list{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-top: 31px;
+        
+        @include media(1140){
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include media(765){
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            align-items: center;
+        }
+        @include media(557){
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+            align-items: center;
+        }
+        
+        
+        &-item{
+            height: 462px !important;
+            position: relative;
+            border-radius: 10px;
+            border: 1px solid  rgba(20, 20, 20, 0.30);
+            box-shadow: 0 4px 4px 0  rgba(20, 20, 20, 0.70);
+            overflow: hidden;
+            max-width: 300px;
+            width: 100%;
+            
+            @include media(860){
+                height: 362px !important;
+            }
+            
+            &::after{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: rgba(20, 20, 20, 0.70);
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: 0.6s ease-in-out;
+                opacity: 0;
+            }
+        
+            &:hover::after{
+                opacity: 1;
+            }
+            
+            &:hover h2{
+                opacity: 1;
+            }
+            
+            &:hover img{
+                transform: scale(1.02);
+            }
+        
+            & img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 0.6s ease-in-out;
+            }
+            
+            & h2{
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translate(-50%);
+                font-size: 16px;
+                font-weight: 700;
+                text-align: center;
+                color: #fff;
+                z-index: 1;
+                opacity: 0;
+                transition: 0.4s;
+            }
+            }
+    }
+}

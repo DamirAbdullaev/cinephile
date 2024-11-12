@@ -1,0 +1,62 @@
+.rec__infoo{
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    transition: 0.5s;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        
+        background: rgba(25, 25, 25, 0.712);
+    }
+    
+    &.active{
+        height: 700px;
+        @include media(540){
+            height: 500px;
+        }
+    }
+    
+    &-close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        border-radius: 33px;
+        background: rgba(20, 20, 20, 0.70);
+        padding: 20px;
+        z-index: 2;
+        cursor: pointer;
+    }
+    
+    &_block{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        &-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        & h2{
+            font-size: 50px;
+            font-weight: 700;
+            color: white;
+            
+            @include media(720){
+                font-size: 30px;
+            }
+            @include media(360){
+                font-size: 25px;
+            }
+        }
+    }
+}
